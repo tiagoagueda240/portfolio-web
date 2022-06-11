@@ -18,7 +18,7 @@ def sobre_mim_view(request):
       'interesses': Interesse.objects.all()})
 
 def projetos_view(request):
-	return render(request, 'portfolio/projetos.html', {'projetos': Projeto.objects.all()})
+	return render(request, 'portfolio/projetos.html', {'projetos': Projeto.objects.all(), 'tfcs': Tfc.objects.all()})
 
 def web_view(request):
 	return render(request, 'portfolio/web.html', {'tecnologias': Tecnologia.objects.all(), 'laboratorios': Laboratorio.objects.all(), 'noticias' : Noticia.objects.all()})

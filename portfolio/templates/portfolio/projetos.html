@@ -20,5 +20,25 @@
 
 {% endfor %}
 </section>
+
+<section class="title"> 
+    <h2>Trabalhos de final de curso</h2> 
+</section>
+
+<section class="post container">
+    {% for projeto in tfcs %}
+<div class="post-box">
+  <img class="post-img" src="{{ projeto.imagem.url }}" alt="">
+<h2 class="category">{{ projeto.autor }}</h2>
+<h2 class="category">{{ projeto.orientadores }}</h2>
+<a href="{{ projeto.link}}" class="post-title">{{ projeto.titulo }}</a>
+<span class="post-date">{{ projeto.ano }}</span>
+<p class="post-description">{{ projeto.resumo }}</p>
+<a href="projeto.relatorio">Relatório</a>
+<a href="projeto.linkGithub:">Github</a>
+</div>
+
+{% endfor %}
+</section>
     
 {% endblock %}

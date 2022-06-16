@@ -1059,28 +1059,5 @@ p.mark-blue {
 }
 
 
-.movies{
-	display: flex;
-	flex-wrap: wrap;
-	column-gap: 40px;
-	justify-content: center;
-	color: white;
-	text-align: center;
-}
 
-footer{
-	display: flex;
-	justify-content: center;
-	background-color: #2f91e0;
-	padding: 20px 0;
-	margin-top: 50px;
-}
-
-.tempo{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	color: white;
-	font-size: 20px;
-}
 

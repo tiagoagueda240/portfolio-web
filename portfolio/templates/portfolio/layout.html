@@ -62,8 +62,27 @@
             {% block main %}
             {% endblock main %}
         </main>
+
+        
+
           
-          <footer>ULHT, 2022</footer>
+          <footer>ULHT | Tiago Águeda | <span class="horario"></span></footer>
+
+          <script> 
+          //Executa o codigo de segundo a segundo
+            let interval = setInterval(()=>{
+           
+              var dataAtual = new Date();
+              var dia = dataAtual.getDate();
+              var mes = (dataAtual.getMonth() + 1);
+              var ano = dataAtual.getFullYear();
+              var horas = dataAtual.getHours();
+              var minutos = dataAtual.getMinutes();
+              var segundos = dataAtual.getSeconds();
+           console.log("Hoje é dia " + dia + "/" + mes + " de " + ano + ". Agora são " + horas + ":" + minutos + "h.");
+           document.querySelector('.horario').innerHTML = " " + dia + "/" + mes + "/" + ano + " | " + horas + ":" + minutos + ":" + segundos;
+           
+            }, 1000);</script>
 
           <script src="{% static 'portfolio/script_filtro.js' %}"></script>
     </body>

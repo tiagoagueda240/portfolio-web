@@ -31,5 +31,57 @@
    </div>
    
 </section>
+
+<section class="title"> 
+   <h2>Api meteriologia</h2> 
+</section>
+ <section class="tempo">
+   <p id="tempMax"> Max: </p>
+   <p id="tempMin"> Min: </p>
+   <p id="windSpeed"> Vento: </p>
+ </section>
+
+
+<section class="title"> 
+   <h2>Api filmes IMDB</h2> 
+</section>
+<div class="movies"></div>
+
+<script>
+ document.addEventListener('DOMContentLoaded', function() {
+ fetch('https://api.ipma.pt/open-data/forecast/meteorology/cities/daily/1110600.json')
+ .then(response => response.json()).then(data =>{
+   document.querySelector('#tempMin').append(data.data[0].tMin);
+   document.querySelector('#tempMax').append(data.data[0].tMax);
+   document.querySelector('#windSpeed').append(data.data[0].classWindSpeed);
+ });
+});
+
+
+
+const options = {
+method: 'GET',
+headers: {
+'X-RapidAPI-Key': '626e3b807emsha76e36d46445d17p1be24fjsnc8f75e4530d6',
+'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
+}
+};
+
+
+fetch('https://online-movie-database.p.rapidapi.com/auto-complete?q=game', options)
+.then(response => response.json())
+.then(data => {
+const list = data.d;
+
+list.map((item) => {
+const name = item.l;
+const poster = item.i.imageUrl;
+const movie = '<div class ="filme"><img src="' + item.i.imageUrl + '" width="250" height="350"> <h3>' + item.l + '</h3></div>';
+document.querySelector('.movies').innerHTML += movie;
+})
+})
+.catch(err => console.error(err));
+
+</script>
     
 {% endblock %}

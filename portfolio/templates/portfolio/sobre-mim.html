@@ -39,14 +39,13 @@
         <div class="face face1">
             <div class="content">
                 <h3>{{cadeira.nome}}</h3>
-                <p><b>Ranking (0-5): </b>{{cadeira.ranking}}</p>
+                <p style="text-align: center;"><b>Ranking (0-5): </b>{{cadeira.ranking}}</p>
             </div>
         </div>
         <div class="face face2">
             <div class="content">
                 <p>{{cadeira.topicosAbordados}}</p>
                 <p><b>Professor Teórica: </b><a href="{{cadeira.docente_teorica.link_lusofona}}"> <i>{{cadeira.docente_teorica.nome}}</i></a></p>
-                <p><b>Projetos: </b>{% for projeto in cadeira.projetos.all %}<a href="{% url 'portfolio:projetos' %}"> {{projeto.titulo}}</a> {% endfor %}</p>
                 <a href="{{cadeira.link}}">Saber Mais</a>
             </div>
         </div>

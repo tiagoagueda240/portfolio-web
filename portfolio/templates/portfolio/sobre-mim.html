@@ -76,8 +76,8 @@
     <div class="caixa">
         <h2 class="titulo">{{competencia.titulo}}</h2>
         <h5 class="descricao">{{competencia.descricao}}</h5>
-        <p><b>Projetos: </b>{% for projeto in competencia.projetos.all %} <a href="{% url 'portfolio:projetos' %}"> {{projeto.titulo}}</a> {% endfor %}</p>
-        <p><b>Cadeira: </b>{% for cadeira in competencia.cadeira.all %} <a href="{{cadeira.link_cadeira}}">{{cadeira.nome}};</a> {% endfor %}</p>
+        <p><b>Projetos: </b>{% for projeto in competencia.projetos.all %} <a href="{% url 'portfolio:projetos' %}" style="color: white;"> {{projeto.titulo}}</a> {% endfor %}</p>
+        <p><b>Cadeira: </b>{% for cadeira in competencia.disciplinas.all %} <a href="{{cadeira.link_cadeira}}" style="color: white;">{{cadeira.nome}};</a> {% endfor %}</p>
 
     </div>
     {% endfor %}

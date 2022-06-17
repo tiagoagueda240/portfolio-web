@@ -905,7 +905,7 @@ font-weight: 700;
     transform: translateX(-50%);
     width: 350px;
     z-index: 2;
-    background-color: #cd5334;
+    background-color: #2f91e0;
     @media (max-width: 992px) {
         width: 270px;
     }
@@ -919,7 +919,7 @@ font-weight: 700;
     z-index: 1;
     border-radius: 30px;
     box-shadow: 14px 21px 69px #c4c6e7;
-  background-color: #cd5334;
+  background-color: #2f91e0;
     @media (max-width: 992px) {
         width: 250px;
     }
@@ -962,7 +962,7 @@ font-weight: 700;
     margin: 0 20px;
     width: 40px;
     height: 40px;
-    background-color: #edb88b;
+    background-color: #2f90e09d;
     color: #fff;
 }
 .carrossel-controls button:focus {
@@ -1018,14 +1018,14 @@ font-weight: 700;
     width: 100%;
 }
 .carrossel-nav li {
-    background: #cd5334;
+    background: #2f91e0;
     border-radius: 50%;
     height: 10px;
     margin: 0 16px;
     width: 10px;
 }
 .carrossel-nav li.carrossel-item-selected {
-    background: #edb88b;
+    background: #2f90e09d;
 }
 
 p.mark-blue {

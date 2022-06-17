@@ -4,7 +4,7 @@
 <section class="head">
     <div class="content">
         <h2 class="title">Web</h2>
-        <span class="subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+        <span class="subtitle">Informações sobre a web e sobre este website</span>
     </div>
 </section>
 
@@ -70,21 +70,25 @@
     <h2>Quizz</h2> 
 </section>
 
-<form action="quizz" method="post">
+<form action="quizz" method="post" style="display: flex; justify-content: center;">
     {% csrf_token %}
-    <label for="fname">Nome:</label><br>
-  <input type="text" id="nome" name="nome" value="nome"><br>
-  <label for="lname">Apelido:</label><br>
-  <input type="text" id="apelido" name="apelido" value="apelido"><br><br>
-    <label for="pergunta1">Pergunta 1</label><br>
-    <input type="text" id="resposta1" name="resposta1" value="resposta1"><br>
-    <label for="pergunta2">Pergunta 2</label><br>
-    <input type="text" id="resposta2" name="resposta2" value="resposta2"><br><br>
-    <label for="pergunta3">Pergunta 3</label><br>
-    <input type="text" id="resposta3" name="resposta3" value="resposta3"><br>
-    <label for="pergunta4">Pergunta 4</label><br>
-    <input type="text" id="resposta4" name="resposta4" value="resposta4"><br><br>
-    <input type="submit" value="Submit">
+
+    <div class="form" style="display: flex; flex-direction: column; width: 40%; color: white;">
+        <label for="fname">Nome:</label>
+        <input type="text" id="nome" name="nome" value="nome" style="height: 40px; padding-left: 20px;">
+        <label for="lname">Apelido:</label>
+        <input type="text" id="apelido" name="apelido" value="apelido" style="height: 40px; padding-left: 20px;">
+        <label for="pergunta1">O que significa DOCTYPE?</label>
+        <input type="text" id="resposta1" name="resposta1" value="resposta1" style="height: 40px; padding-left: 20px;">
+        <label for="pergunta2">O que significa CSS?</label>
+        <input type="text" id="resposta2" name="resposta2" value="resposta2" style="height: 40px; padding-left: 20px;">
+        <label for="pergunta3">O que significa HTML?</label>
+        <input type="text" id="resposta3" name="resposta3" value="resposta3" style="height: 40px; padding-left: 20px;">
+        <label for="pergunta4">O que significa AJAX?</label>
+        <input type="text" id="resposta4" name="resposta4" value="resposta4" style="height: 40px; padding-left: 20px;"><br>
+        <input type="submit" value="Submit" style="height: 40px; background-color: #2f91e0;color: white;"><br><br>
+    </div>
+    
 </form>
 
 {% load static %} 

@@ -71,16 +71,16 @@ def resultados_quizz(request):
     resposta3 = request.POST['resposta3']
     resposta4 = request.POST['resposta4']
 
-    if resposta1 == "1" :
+    if resposta1 == "document type declaration" :
         pontuacao += 25
 
-    if resposta2 == "2" or resposta2 == "2" :
+    if resposta2 == "Cascading Style Sheets" :
         pontuacao += 25
 
-    if resposta3 == "3" or resposta3 == "3" :
+    if resposta3 == "HyperText Markup Language" :
         pontuacao += 25 
     
-    if resposta4 == "4" or  resposta4 == "4" :
+    if resposta4 == "Asynchronous JavaScript and XML" :
         pontuacao += 25
 
     return pontuacao

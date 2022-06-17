@@ -30,7 +30,7 @@
 <div class="post-box">
   <img class="post-img" src="{{ projeto.imagem.url }}" alt="">
 <h2 class="category"><b>Autores: </b>{% for autor in projeto.autor.all %}{{autor.nome}} {{autor.apelido}}; {% endfor %}</h2>
-<h2 class="category"><b>Orientador: </b>{% for orientador in projeto.orientador.all %}{{orientador.nome}} {{orientador.apelido}}; {% endfor %}</h2>
+<h2 class="category"><b>Orientador: </b>{% for orientador in projeto.orientadores.all %}{{orientador.nome}} {{orientador.apelido}}; {% endfor %}</h2>
 <a href="{{ projeto.link}}" class="post-title">{{ projeto.titulo }}</a>
 <span class="post-date">{{ projeto.ano }}</span>
 <p class="post-description">{{ projeto.resumo }}</p>

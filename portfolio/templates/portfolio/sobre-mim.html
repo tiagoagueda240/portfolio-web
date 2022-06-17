@@ -100,8 +100,8 @@
 </section>
 <section class="about-section">
     {% for interesse in interesses %}
-    <div class="caixa" style="color: #fff;">
-        <a href="{{cadeira.link}}">
+    <div class="caixa">
+        <a href="{{cadeira.link}}" style="color: #fff;">
         <img src="{{interesse.imagem.url}}" alt="" width="80">
         <h2 class="titulo">{{interesse.titulo}}</h2>
         <p class="descricao">{{interesse.descricao}}</p>
